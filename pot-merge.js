@@ -190,7 +190,7 @@ SetOfBlocks.prototype.getDuplicate = function(hash) {
         console.log('');
         console.log('writefile: '+blocks.toStr());
         var text = blocks.toStr();
-        fs.writeFile(output, text);
+        fs.writeFile(output, text, () => true);
     }
 
     var run = function(a, b, output) {
